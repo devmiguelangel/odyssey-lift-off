@@ -6,12 +6,15 @@
   "scripts": {
     "start": "nodemon src/index"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "dotenv": "^8.2.0",
-    "nodemon": "^2.0.4"
+  "dependencies": {
+    "apollo-server": "3.10.2",
+    "graphql": "16.6.0"
   },
-  "author": "Raphael Terrier @R4ph-t",
+  "devDependencies": {
+    "dotenv": "16.0.3",
+    "nodemon": "2.0.20"
+  },
+  "author": "devmiguelangel",
   "license": "MIT",
   "private": true
 }
