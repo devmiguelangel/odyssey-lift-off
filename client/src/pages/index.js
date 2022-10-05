@@ -1,12 +1,18 @@
-import React, { Fragment } from 'react';
-import { Router } from '@reach/router';
+import React from 'react';
+// import { Router } from '@reach/router';
 /** importing our pages */
+import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
 import Tracks from './tracks';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Tracks />
+  }
+])
 
 export default function Pages() {
   return (
-    <Router primary={false} component={Fragment}>
-      <Tracks path="/" />
-    </Router>
+    <RouterProvider router={router} />
   );
 }

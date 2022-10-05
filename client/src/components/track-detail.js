@@ -9,7 +9,7 @@ import {
   IconBook,
 } from '../styles';
 import { humanReadableTimeFromSeconds } from '../utils/helpers';
-import { Link } from '@reach/router';
+import { Link } from 'react-router-dom';
 import ContentSection from './content-section';
 import MarkDown from './md-content';
 
@@ -59,7 +59,7 @@ const TrackDetail = ({ track }) => {
             <AuthorName>{author.name}</AuthorName>
           </DetailItem>
           <div>
-            <StyledLink to={`./module/${modules[0]['id']}`}>
+            {/* <StyledLink to={`./module/${modules[0]['id']}`}>
               <Button
                 icon={<IconRun width="20px" />}
                 color={colors.pink.base}
@@ -67,11 +67,11 @@ const TrackDetail = ({ track }) => {
               >
                 Start Track
               </Button>
-            </StyledLink>
+            </StyledLink> */}
           </div>
         </DetailRow>
         <ModuleListContainer>
-          <DetailItem>
+          {/* <DetailItem>
             <h4>Modules</h4>
             <ul>
               {modules.map((module) => (
@@ -83,10 +83,10 @@ const TrackDetail = ({ track }) => {
                 </li>
               ))}
             </ul>
-          </DetailItem>
+          </DetailItem> */}
         </ModuleListContainer>
       </TrackDetails>
-      <MarkDown content={description} />
+      {/* <MarkDown content={description} /> */}
     </ContentSection>
   );
 };
