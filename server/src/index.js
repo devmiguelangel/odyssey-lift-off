@@ -1,12 +1,19 @@
 const { ApolloServer } = require('apollo-server');
 const typeDefs = require('./schema');
+const resolvers = require('./resolvers');
 // Mocks
-const mocks = require('./mocks');
+// const mocks = require('./mocks');
+// API
+const TrackAPI = require('./datasources/track-api');
 
 // Apollo server
 const server = new ApolloServer({
   typeDefs,
-  mocks,
+  // mocks,
+  resolvers,
+  dataSources: () => ({
+    TrackAPI: new TrackAPI(),
+  })
 });
 
 // Server listening
