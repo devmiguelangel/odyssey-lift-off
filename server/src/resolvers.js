@@ -5,10 +5,16 @@ const resolvers = {
     tracksForHome: (_, __, { dataSources }) => {
       return dataSources.TrackAPI.getTracksForHome();
     },
+    track: (_, { id }, { dataSources }) => {
+      return dataSources.TrackAPI.getTrack(id);
+    }
   },
   Track: {
     author: ({ authorId }, _, { dataSources }) => {
       return dataSources.TrackAPI.getAuthor(authorId);
+    },
+    modules: ({ id }, _, { dataSources }) => {
+      return dataSources.TrackAPI.getTrackModules(id);
     },
   },
 };

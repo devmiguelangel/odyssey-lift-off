@@ -71,7 +71,7 @@ const TrackDetail = ({ track }) => {
           </div>
         </DetailRow>
         <ModuleListContainer>
-          {/* <DetailItem>
+          <DetailItem>
             <h4>Modules</h4>
             <ul>
               {modules.map((module) => (
@@ -83,10 +83,10 @@ const TrackDetail = ({ track }) => {
                 </li>
               ))}
             </ul>
-          </DetailItem> */}
+          </DetailItem>
         </ModuleListContainer>
       </TrackDetails>
-      {/* <MarkDown content={description} /> */}
+      <MarkDown content={description} />
     </ContentSection>
   );
 };

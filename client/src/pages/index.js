@@ -3,11 +3,16 @@ import React from 'react';
 /** importing our pages */
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
 import Tracks from './tracks';
+import Track from './track'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Tracks />
+  },
+  {
+    path: "/track/:trackId",
+    element: <Track />
   }
 ])
 
